@@ -7,6 +7,9 @@
 % clean citations
 \usepackage{cite}
 
+% multi-row
+\usepackage{multirow}
+
 % hyperref makes references clicky. use \url{www.example.com} or \href{www.example.com}{description} to add a clicky url
 \usepackage{nameref,hyperref}
 
@@ -63,6 +66,12 @@
 
 % use if you want to put caption to the side of the figure - see example in text
 \usepackage{sidecap}
+
+% from bmcart.cls
+%\def\csentence##1{{\mathversion{bold}\bfseries ##1}}%
+\DeclareRobustCommand{\csentence}[1]{
+    {\mathversion{bold}\bfseries #1}}
+    
 
 % use for have text wrap around figures
 \usepackage{wrapfig}
@@ -315,6 +324,7 @@ The resulting maps were used to construct pseudomolecules for the 29 correspondi
 
 Nine chicken BAC clones were chosen in the Wageningen BAC library \cite{Crooijmans2000} and one BAC in the CHORI-261 chicken BAC library \cite{Zimmer1997} according to their known position, as estimated by BAC end sequence information, in regions paralogous to the breakpoint under study (see table X). BAC clones were grown in LB medium with \unit{5}{\micro\gram\per\milli\litre} chloramphenicol. The DNA was extracted using the Qiagen plasmid midi kit.
 FISH was carried out on metaphase spreads obtained from fibroblast cultures of 7-days old chicken and duck embryos, arrested with  \unit{0.05}{\micro\gram\per\milli\litre} colcemid (Sigma) and fixed by standard procedures. The FISH protocol is derived from Yerle et al, 1992, modified for zoo-FISH experiment \cite{Fillon2007}. Two-colour FISH was performed by labelling 100 ng for each BAC clones with alexa fluorochromes (ChromaTide® Alexa Fluor® 488-5-dUTP, Molecular probes; ChromaTide® Alexa Fluor® 568-5-dUTP, Molecular Probes) by random priming using the Bioprim Kit (Invitrogen). The probes were purified using spin column G50 Illustra (Amersham Biosciences). Probes were ethanol precipitated, resuspend in 50\% formamide hybridization buffer (for FISH on chicken metaphases) or in 40\% formamide hybridization buffer for heterologous FISH. Probes were hybridised to chicken metaphase slides for 17 hours at 37\degree C and to duck metaphases for 48H in the Hybridizer (Dako). Chromosomes were counterstained with DAPI in antifade solution (Vectashield with DAPI, Vector). The hybridised metaphases were screened with a Zeiss fluorescence microscope and a minimum of twenty spreads was analysed for each experiment. Spot-bearing metaphases were captured and analysed with a cooled CCD camera using Cytovision software (Leica Biosystem).
+
 
 %This is where your bibliography is generated.
 \bibliography{references}
